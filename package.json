@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-backend",
+  "version": "1.0.0",
+  "description": "backend experiment",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Habibur Rahman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.1",
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.2.3"
+  }
+}
