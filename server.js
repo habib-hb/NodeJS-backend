@@ -117,6 +117,38 @@ app.post('/api/comments', async (req, res) => {
     }
 });
 
+
+// GET a single comment by ID
+app.get('/api/comments/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const comment = await Comment.findById(id);
+        if (!comment) {
+            return res.status(404).json({ message: 'Comment not found' });
+        }
+        res.json(comment);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+// PUT update a comment by ID
+app.put('/api/comments/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const updatedComment = await Comment.findByIdAndUpdate(id, req.body, { new: true });
+        if (!updatedComment) {
+            return res.status(404).json({ message: 'Comment not found' });
+        }
+        res.json(updatedComment);
+    } catch (err) {
+        res.status(400).json({ message: err.message });
+    }
+});
+
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
