@@ -149,6 +149,24 @@ app.put('/api/comments/:id', async (req, res) => {
 });
 
 
+// DELETE a comment by ID
+app.delete('/api/comments/:id', async (req, res) => {
+    const { id } = req.params;
+
+    try {
+        const deletedComment = await Comment.findByIdAndDelete(id);
+        if (!deletedComment) {
+            return res.status(404).json({ message: 'Comment not found' });
+        }
+        res.status(204).end(); // No content to return after successful deletion
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+
+
+
 // Start the server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
