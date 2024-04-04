@@ -1,51 +1,4 @@
 
-// const { MongoClient, ServerApiVersion } = require('mongodb');
-// const mongoose = require('mongoose');
-// const DataModel = require('./dataModel'); // Assuming your model file is named dataModel.js
-
-// const uri = `mongodb+srv://developerhabib1230:habibMongoDB@cluster0.dddvn8u.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
-
-// const client = new MongoClient(uri, {
-//     serverApi: {
-//         version: ServerApiVersion.v1,
-//         useNewUrlParser: true,
-//         useUnifiedTopology: true,
-//         debug: true
-//     }
-// });
-
-// async function run() {
-//     try {
-//         await client.connect();
-//         await client.db("admin").command({ ping: 1 });
-//         console.log("Pinged your deployment. You successfully connected to MongoDB!");
-
-//         // Mongoose connection
-//         await mongoose.connect(uri, {
-//             useNewUrlParser: true,
-//             useUnifiedTopology: true
-//         });
-//         console.log("Connected to MongoDB via Mongoose");
-
-//         // Example data to insert
-//         const exampleData = {
-//             name: "John Doe",
-//             email: "john@example.com",
-//             phone: "1234567890",
-//             text: "This is a sample text"
-//         };
-
-//         // Create a new document using Mongoose model
-//         const newData = await DataModel.create(exampleData);
-//         console.log("New data inserted:", newData);
-//     } finally {
-//         await client.close();
-//         await mongoose.disconnect();
-//         console.log("Disconnected from MongoDB");
-//     }
-// }
-
-// run().catch(console.dir); 
 
 const express = require('express');
 const mongoose = require('mongoose');
@@ -99,6 +52,18 @@ app.get('/api/comments', async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 });
+
+
+// GET last comment
+app.get('/api/comments/last', async (req, res) => {
+    try {
+        const lastComment = await Comment.findOne({}, null, { sort: { _id: -1 } });
+        res.json(lastComment);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
 
 // POST a new comment
 app.post('/api/comments', async (req, res) => {
