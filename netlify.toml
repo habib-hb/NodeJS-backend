@@ -1,5 +1,5 @@
 [build]
-  
+  command = "npm run start"
   publish = "." # Specify the directory to publish (your project root)
 
 [[redirects]]
