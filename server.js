@@ -6,7 +6,14 @@ const path = require('path');
 const app = express();
 
 // Serve static files from the specified directory
-const frontendDirectory = path.join('D:\\', 'Git Clones', 'Value-adder-habib-v-1.2---webApp');
+// const frontendDirectory = path.join('D:\\', 'Git Clones', 'Value-adder-habib-v-1.2---webApp');
+// app.use(express.static(frontendDirectory));
+
+// // Define route to serve index.html
+// app.get('/', (req, res) => {
+//     res.sendFile(path.join(frontendDirectory, 'index.html'));
+// });
+const frontendDirectory = path.join(__dirname, 'front-end'); // Assuming "front-end" is in the same directory as server.js
 app.use(express.static(frontendDirectory));
 
 // Define route to serve index.html

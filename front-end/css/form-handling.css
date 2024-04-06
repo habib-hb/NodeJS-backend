@@ -1,0 +1,42 @@
+@media screen and (min-width: 800px){
+
+.single-comment-section {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid #ccc; */
+}
+.single-comments {
+    display: flex;
+    flex-direction: column;
+    width: 600px; /* Set an even wider width */
+    border: 1px solid #686666; /* Optional: Add border for visualization */
+    padding: 10px;
+    
+}
+.single-comments p {
+    display: flex;
+    align-items: center;
+
+    
+}
+/* 
+.single-comments p span{
+    display: flex;
+    max-width: 100px;
+    flex-wrap: wrap;
+    
+} */
+.single-comments b {
+    flex: 0 0 auto;
+    width: 300px; /* Adjust as needed */
+    text-align: right;
+    margin-right: 10px; /* Adjust as needed */
+}
+.button-container {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px;
+    margin-top: 10px; /* Optional: Add spacing between content and buttons */
+}
+
+}

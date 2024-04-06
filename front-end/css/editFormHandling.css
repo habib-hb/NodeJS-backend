@@ -1,0 +1,42 @@
+.dialog-form{
+    width: 90%;
+    margin: auto;
+    padding: 24px 0px;
+    text-align: center;
+}
+
+.edit-form{
+}
+
+.edit-form input{
+    width: 50%;
+}
+
+.edit-form textarea{
+    width: 50%;
+}
+
+#close-icon-btn{
+    position: absolute;
+    right: 32px;
+    color:aliceblue;
+    background-color: rgb(229, 24, 14);
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+#close-icon-btn:hover{
+    color:rgb(229, 24, 14);
+    background-color: aliceblue;
+    border: 2px solid rgb(229, 24, 14);
+}
+
+@media screen and (max-width: 768px) {
+    .dialog-form{
+        width: 100%;
+        margin: auto;
+        padding: 24px 0px;
+        text-align: center;
+    }
+}

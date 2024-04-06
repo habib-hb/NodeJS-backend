@@ -1,0 +1,16 @@
+/* .section-gallary {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.gallary-img {
+  
+    transition: all 0.3s ease; /* Smooth transition effect */
+}
+
+.gallary-img:hover {
+    transform: scale(1.2); /* Zoom in effect on hover */
+    z-index: 1;
+}
+

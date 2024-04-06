@@ -1,0 +1,172 @@
+
+@media screen and (max-width: 1140px) {
+    .nav-list{
+        flex-direction: column;
+    }
+
+    .navbar{
+        height: 447px;
+        flex-direction: column;
+        transition: all 0.7s ease-out;
+    }
+
+    #nav-links-div{
+        /* display: none; */
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    /**/
+    .secondHalf{
+        margin-top: 8px;
+        width:20%;
+    }
+
+    .secondHalf img{
+        width:70%;
+        border: 12px solid white;
+        border-radius: 150px;
+        display: block;
+        margin:auto;
+        /*mix-blend-mode: color-dodge;*/
+    }
+
+    .thumbnail img{
+        width: 90%;   
+        max-width: 800px;
+        display: flex;
+        margin: auto;
+        border-radius: 8px;
+        
+    }
+    /**/
+    .rightNav{
+        text-align: center;
+        width: 60%;
+    }
+
+    .box-main{
+        flex-direction: column-reverse;
+        max-width: 100%;
+    }
+
+    #search{
+        width: 90%;
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .h-nav-resp{
+        height: 64px;
+    }
+
+    .v-class-resp{
+        visibility: hidden;
+    }
+    .section{
+        flex-direction: column-reverse;
+    }
+
+    .text-small{
+        text-align: justify;
+        text-align-last: center;
+    }
+
+    .text-small-header{
+        text-align: center;
+    }
+
+    .text-big{
+        text-align: center;
+    }
+
+    .buttons{
+        text-align: center;
+        margin-left: 0px;
+    }
+
+    /*mine */
+    .section{
+        padding: 40px 5px;
+    } /**/
+
+
+/* 2/3 edition */
+
+.section-gallary{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 0px;
+}
+
+
+
+.gallary-img{
+    width:92%;
+    padding: 2px;
+    border-radius: 8px;
+}
+
+
+/*end*/
+
+/*4/3 edition*/
+#galary-img-container div{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    
+    margin : 2px 4px;
+    text-align: center;
+    border: 1px solid #212121;
+    border-radius: 8px;
+    align-items: center;
+}
+
+
+/*end*/
+
+    .paras{
+        padding: 2px;
+    }
+
+    #form {
+        max-width: 88%;
+    }
+
+    .btn-submit{
+        width: fit-content;
+        margin: auto;
+       padding-bottom: 2vh;
+    }
+    .btn-submit button{
+        border-color: rgb(11, 10, 10);
+        font-size: large;
+        padding: 2vh  6vh;
+    }
+
+
+
+}
+
+@media screen and (min-width: 1141px) and (max-width: 1280px){
+    #search{
+        width: 60%;
+    }
+    #search-btn{
+        /* width: 30%; */
+    }
+}
+
+
+
+
