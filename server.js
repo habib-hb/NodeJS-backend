@@ -13,7 +13,7 @@ const app = express();
 // app.get('/', (req, res) => {
 //     res.sendFile(path.join(frontendDirectory, 'index.html'));
 // });
-const frontendDirectory = path.join(__dirname, 'front-end'); // Assuming "front-end" is in the same directory as server.js
+const frontendDirectory = path.join(__dirname); // Assuming "front-end" is in the same directory as server.js
 app.use(express.static(frontendDirectory));
 
 // Define route to serve index.html
