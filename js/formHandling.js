@@ -193,8 +193,8 @@ setInterval(()=>{
         <p><b>Commenter's Phone:</b> ${comment.phone}.</p>
         <p><b>Commenter's Comment:</b> ${comment.text}.</p>
         <div class="button-container">
-            <input type="submit" value="Delete" onclick="deleteComment('${comment.name}' , '${comment.email}' , '${comment.phone}' , '${comment.text}')">
-            <input type="submit" value="Edit" onclick="editComment('${comment.name}' , '${comment.email}' , '${comment.phone}' , '${comment.text}')">
+            <input type="submit" class="delete-comment-btn" value="Delete" onclick="deleteComment('${comment.name}' , '${comment.email}' , '${comment.phone}' , '${comment.text}')">
+            <input type="submit" class="edit-comment-btn" value="Edit" onclick="editComment('${comment.name}' , '${comment.email}' , '${comment.phone}' , '${comment.text}')">
         </div>
     </div>
     <hr>

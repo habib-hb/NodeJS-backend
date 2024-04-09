@@ -1,4 +1,7 @@
 @media screen and (min-width: 800px){
+.comments{
+    margin-top: 20px;
+}
 
 .single-comment-section {
     display: flex;
@@ -11,7 +14,7 @@
     width: 600px; /* Set an even wider width */
     border: 1px solid #686666; /* Optional: Add border for visualization */
     padding: 10px;
-    
+    background-color: rgb(243, 243, 243);
 }
 .single-comments p {
     display: flex;
@@ -38,5 +41,41 @@
     gap: 10px;
     margin-top: 10px; /* Optional: Add spacing between content and buttons */
 }
+
+.delete-comment-btn{
+    background-color: #ff4b4b;
+    padding: 4px 16px;
+    border:2px solid #ff4b4b;
+    border-radius: 4px;
+    color: white;
+    width: 80px;
+    cursor: pointer;
+}
+
+.delete-comment-btn:hover{
+    background-color: #f6f3f2;
+    color: #ff4b4b;
+    border: 2px solid #ff4b4b;
+    width: 80px;
+}
+
+.edit-comment-btn{
+    background-color: #456cf9;
+    padding: 4px 16px;
+    border:2px solid #456cf9;
+    border-radius: 4px;
+    color: #f6f3f2;
+    width: 80px;
+    cursor: pointer;
+     }
+
+.edit-comment-btn:hover{
+    background-color: #f6f3f2;
+    color: #456cf9;
+    border: 2px solid #456cf9;
+    width: 80px;
+}
+
+
 
 }
