@@ -162,7 +162,7 @@ throw new Error(`Failed to fetch comment details: ${err.message}`);
 // Create a form dynamically to edit the comment
 const form = document.createElement('form');
 form.innerHTML = `
-    <button type="button" id="close-icon-btn">X</button> 
+    <button type="button" id="close-edit-icon-btn">X</button> 
     <label for="edit-name">Name:</label>
     <input type="text" id="edit-name" name="name" value="${comment.name}"><br><br>
     <label for="edit-email">Email:</label>
@@ -171,8 +171,8 @@ form.innerHTML = `
     <input type="text" id="edit-phone" name="phone" value="${comment.phone}"><br><br>
     <label for="edit-text">Text:</label>
     <textarea id="edit-text" name="text">${comment.text}</textarea><br><br>
-    <button type="button" onclick="updateComment('${commentId}')">Update</button>
-    <button type="button" id="close-btn">Cancel</button> <!-- Close button -->
+    <button type="button" id="update-edit-btn" onclick="updateComment('${commentId}')">Update</button>
+    <button type="button" id="cancel-edit-btn">Cancel</button> <!-- Close button -->
 `;
 form.setAttribute('class', 'edit-form');
 
@@ -184,13 +184,13 @@ document.body.appendChild(dialog);
 dialog.showModal();
 
 // Close button functionality
-const closeBtn = form.querySelector('#close-btn');
+const closeBtn = form.querySelector('#cancel-edit-btn');
 closeBtn.addEventListener('click', () => {
     dialog.close(); // Close the dialog box when the close button is clicked
 });
 
 // Close button functionality
-const closeIconBtn = form.querySelector('#close-icon-btn');
+const closeIconBtn = form.querySelector('#close-edit-icon-btn');
 closeIconBtn.addEventListener('click', () => {
     dialog.close(); // Close the dialog box when the close button is clicked
 });

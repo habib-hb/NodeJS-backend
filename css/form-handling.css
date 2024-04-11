@@ -57,6 +57,7 @@
     color: #ff4b4b;
     border: 2px solid #ff4b4b;
     width: 80px;
+    transition: all 0.2s ease;
 }
 
 .edit-comment-btn{
@@ -74,6 +75,7 @@
     color: #456cf9;
     border: 2px solid #456cf9;
     width: 80px;
+    transition: all 0.2s ease;
 }
 
 

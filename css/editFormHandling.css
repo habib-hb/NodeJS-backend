@@ -16,20 +16,58 @@
     width: 50%;
 }
 
-#close-icon-btn{
+#close-edit-icon-btn{
     position: absolute;
     right: 32px;
     color:aliceblue;
     background-color: rgb(229, 24, 14);
-    border: none;
+    border: 2px solid rgb(229, 24, 14);
     padding: 8px;
     border-radius: 8px;
 }
 
-#close-icon-btn:hover{
+#close-edit-icon-btn:hover{
     color:rgb(229, 24, 14);
     background-color: aliceblue;
     border: 2px solid rgb(229, 24, 14);
+    transition: all 0.2s ease-out;
+}
+
+#update-edit-btn{
+    background-color: #456cf9;
+    padding: 4px 16px;
+    margin-right: 4px;
+    border:2px solid #456cf9;
+    border-radius: 4px;
+    color: #f6f3f2;
+    width: 80px;
+    cursor: pointer;
+}
+
+#update-edit-btn:hover{
+    background-color: #f6f3f2;
+    color: #456cf9;
+    border: 2px solid #456cf9;
+    width: 80px;
+    transition: all 0.2s ease;
+}
+
+#cancel-edit-btn{
+    background-color: #ff4b4b;
+    padding: 4px 16px;
+    border:2px solid #ff4b4b;
+    border-radius: 4px;
+    color: white;
+    width: 80px;
+    cursor: pointer;
+}
+
+#cancel-edit-btn:hover{
+    background-color: #f6f3f2;
+    color: #ff4b4b;
+    border: 2px solid #ff4b4b;
+    width: 80px;
+    transition: all 0.2s ease;
 }
 
 @media screen and (max-width: 768px) {
